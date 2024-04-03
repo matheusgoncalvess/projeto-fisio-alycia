@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-desktop: url(./assets/bg-desktop-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+}
+
 body {
   /*
   Ordem do background #
@@ -16,7 +21,8 @@ body {
   background: color image repeat position/size
   */
   
-  background: url(./assets/bg-mobile-light.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -113,3 +119,10 @@ footer {
   font-size: 14px;
 }
 
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-desktop: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+  }
+}
